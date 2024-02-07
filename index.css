@@ -1,20 +1,28 @@
+/* Temel sayfa stili */
 body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
+/* Yakında bölümünün stil tanımı */
 #comingSoonContainer {
     text-align: center;
     background-color: #f0f0f0;
     padding: 20px;
 }
 
+/* Oyun bölümünün stil tanımı */
 #gameContainer {
     text-align: center;
     padding: 20px;
 }
 
+/* Canvas için stil tanımlamaları */
 canvas {
     background-color: #ddd;
+    width: 400px; /* Canvas genişliği */
+    height: 200px; /* Canvas yüksekliği */
+    display: block; /* Blok seviyesinde gösterim sağlar, böylece 'margin: auto' ile merkeze alınabilir */
+    margin: auto; /* Canvas'ı yatay olarak sayfanın merkezine alır */
 }
