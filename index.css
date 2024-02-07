@@ -3,72 +3,59 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4; /* Açık bir arka plan rengi */
-    color: #333; /* Metin rengi */
+    background-color: #f7f7f7; /* Daha yumuşak bir arka plan rengi */
+    color: #333;
 }
 
 /* Başlık ve Yakında bölümünün stil tanımı */
 #comingSoonContainer {
     text-align: center;
-    background-color: #007bff; /* Canlı bir arka plan rengi */
-    color: #ffffff; /* Beyaz metin rengi */
-    padding: 50px 0; /* Dikey padding */
+    background-color: #2e3d55; /* Daha profesyonel bir arka plan rengi */
+    color: #ffffff;
+    padding: 40px 0;
 }
 
 #comingSoonContainer h1 {
     margin: 0;
-    font-size: 2.5em; /* Büyük başlık boyutu */
+    font-size: 3em;
 }
 
 #comingSoonContainer p {
-    font-size: 1.2em; /* Açıklama metni boyutu */
-    margin-top: 10px; /* Açıklama metni üst boşluk */
+    font-size: 1.5em;
+    margin-top: 10px;
 }
 
 /* Oyun bölümünün stil tanımı */
 #gameContainer {
     text-align: center;
-    padding: 20px 0; /* Dikey padding */
+    padding: 40px 0;
 }
 
 #gameContainer h2 {
-    color: #333; /* Metin rengi */
-    margin-bottom: 20px; /* Başlık alt boşluk */
+    margin-bottom: 30px;
+    color: #333;
 }
 
+/* Canvas için stil tanımlamaları */
 canvas {
-    background-color: #fff; /* Beyaz arka plan rengi */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Gölge efekti */
-    border: 1px solid #ccc; /* Kenarlık */
-    margin-bottom: 20px; /* Alt boşluk */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 30px; /* Düğme ile arasındaki boşluk artırıldı */
 }
 
+/* Düğme için stil tanımlamaları */
 button {
-    background-color: #28a745; /* Yeşil arka plan rengi */
-    color: #ffffff; /* Beyaz metin rengi */
-    border: none; /* Kenarlık yok */
-    padding: 10px 20px; /* İç padding */
-    font-size: 1em; /* Metin boyutu */
-    cursor: pointer; /* İmleç pointer */
-    transition: background-color 0.3s; /* Arka plan rengi geçişi */
+    background-color: #5cb85c; /* Daha canlı bir yeşil tonu */
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Düğmeye gölge efekti eklendi */
+    border-radius: 5px; /* Düğmenin köşeleri yuvarlatıldı */
 }
 
 button:hover {
-    background-color: #218838; /* Buton üzerine gelince koyulaşan arka plan rengi */
-}
-
-/* Responsivlik için stil */
-@media (max-width: 768px) {
-    #comingSoonContainer h1 {
-        font-size: 2em; /* Küçük ekran başlık boyutu */
-    }
-    
-    #comingSoonContainer p {
-        font-size: 1em; /* Küçük ekran açıklama metni boyutu */
-    }
-    
-    button {
-        width: 100%; /* Butonu ekrana sığdır */
-        padding: 15px 0; /* Dikey padding */
-    }
+    background-color: #449d44; /* Düğme üzerine gelince rengi koyulaşan ton */
 }
