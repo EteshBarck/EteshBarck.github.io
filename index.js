@@ -1,16 +1,16 @@
-document.getElementById('upButton').addEventListener('click', function() {
-    makeGuess('up');
-});
-
-document.getElementById('downButton').addEventListener('click', function() {
-    makeGuess('down');
-});
-
-function makeGuess(guess) {
-    const result = Math.random() < 0.5 ? 'down' : 'up'; // Rastgele sonuç
-    if(guess === result) {
-        document.getElementById('result').textContent = 'Correct! The price went ' + result + '.';
-    } else {
-        document.getElementById('result').textContent = 'Wrong guess! The price went ' + result + '.';
+document.getElementById('startGame').addEventListener('click', function() {
+    var canvas = document.getElementById('stockGameCanvas');
+    var ctx = canvas.getContext('2d');
+    
+    canvas.width = 400;
+    canvas.height = 200;
+    
+    // Basit bir dalgalanma çizgisi çizelim
+    ctx.beginPath();
+    ctx.moveTo(0, 100);
+    for (let i = 0; i < canvas.width; i+=10) {
+        let value = Math.random() * 100; // Rastgele bir yükseklik değeri
+        ctx.lineTo(i, 100 - value + Math.random() * 50);
     }
-}
+    ctx.stroke();
+});
