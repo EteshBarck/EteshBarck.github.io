@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Coming Soon - Lottery Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="coming-soon">
-        <h1>Coming Soon</h1>
-    </section>
-    <section id="lottery-game">
-        <h2>Lottery Game</h2>
-        <div id="number-selection">
-            <label for="numbers">Select your numbers (1-39):</label><br>
-            <input type="text" id="numbers" name="numbers" placeholder="E.g., 5, 12, 23, 27, 36, 39">
-        </div>
-        <button onclick="startGame()">Start</button>
-        <div id="results"></div>
-    </section>
-    <script src="index.js"></script>
+    <div class="container">
+        <header>
+            <h1>Coming Soon</h1>
+        </header>
+        <main>
+            <section class="lottery-game">
+                <h2>Lottery Game</h2>
+                <div class="number-selection">
+                    <input type="text" id="numbers" name="numbers" placeholder="Enter 6 numbers (1-39)">
+                    <button onclick="startGame()">Start</button>
+                </div>
+                <div id="results"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
