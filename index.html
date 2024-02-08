@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header">
-        <h1>Stock Market Game</h1>
-        <p>Coming Soon...</p>
-    </div>
-    <div id="gameContainer">
-        <h2>Mini Game</h2>
-        <div id="stockChart">
-            <canvas id="stockGameCanvas"></canvas>
+    <section id="coming-soon">
+        <h1>Coming Soon</h1>
+    </section>
+    <section id="lottery-game">
+        <h2>Lottery Game</h2>
+        <div id="number-selection">
+            <label for="numbers">Select your numbers (1-39):</label><br>
+            <input type="text" id="numbers" name="numbers" placeholder="E.g., 5, 12, 23, 27, 36, 39">
         </div>
-        <button id="startGame">Start Game</button>
-    </div>
-    <script src="index.js"></script>
+        <button onclick="startGame()">Start</button>
+        <div id="results"></div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
