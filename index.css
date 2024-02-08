@@ -1,30 +1,42 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
 }
 
-#coming-soon {
-    background-color: #f0f0f0;
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 0;
     text-align: center;
-    padding: 50px 0;
 }
 
-#lottery-game {
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.lottery-game {
+    background: white;
     text-align: center;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#number-selection {
-    margin-bottom: 20px;
-}
-
-input[type="text"] {
+.number-selection input[type="text"] {
     padding: 10px;
-    width: 300px;
-}
-
-button {
-    padding: 10px 20px;
-    cursor: pointer;
-}
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 100px);
+   
