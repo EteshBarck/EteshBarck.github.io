@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - Lottery Game</title>
+    <title>Coming Soon</title>
     <link rel="stylesheet" href="myCss.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Coming Soon</h1>
-        </header>
-        <main>
-            <section class="lottery-game">
-                <h2>Lottery Game</h2>
-                <div class="number-selection">
-                    <input type="text" id="numbers" name="numbers" placeholder="Enter 6 numbers (1-39)">
-                    <button onclick="startGame()">Start</button>
-                </div>
-                <div id="results"></div>
-            </section>
-        </main>
+    <div class="coming-soon-container">
+        <h1 class="coming-soon-title">Coming Soon!</h1>
+    </div>
+    <div class="lottery-game-container">
+        <h2>Try Your Luck!</h2>
+        <div class="input-container">
+            <input type="number" id="number1" min="1" max="39" placeholder="1-39" required>
+            <input type="number" id="number2" min="1" max="39" placeholder="1-39" required>
+            <input type="number" id="number3" min="1" max="39" placeholder="1-39" required>
+            <input type="number" id="number4" min="1" max="39" placeholder="1-39" required>
+            <input type="number" id="number5" min="1" max="39" placeholder="1-39" required>
+            <input type="number" id="number6" min="1" max="39" placeholder="1-39" required>
+        </div>
+        <button class="draw-button" onclick="startGame()">Draw Numbers</button>
+        <div id="results"></div>
     </div>
     <script src="myJs.js"></script>
 </body>
