@@ -1,26 +1,33 @@
 function startGame() {
     const input = document.getElementById('numbers').value;
-    const selectedNumbers = input.split(',').map(num => parseInt(num.trim())).filter(num => num >= 1 && num <= 39);
+    const selectedNumbers = input.split(/[\s,]+/).map(num => parseInt(num.trim(), 10)).filter(num => !isNaN(num) && num >= 1 && num <= 39);
 
     if (selectedNumbers.length !== 6) {
-        alert('Please select exactly 6 unique numbers between 1 and 39.');
+        alert('Please enter exactly 6 unique numbers between 1 and 39.');
         return;
     }
 
-    const drawnNumbers = [];
-    while (drawnNumbers.length < 6) {
-        const randomNumber = Math.floor(Math.random() * 39) + 1;
-        if (!drawnNumbers.includes(randomNumber)) {
-            drawnNumbers.push(randomNumber);
-        }
-    }
-
     const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = '<h3>Drawn Numbers:</h3>' + drawnNumbers.join(', ');
+    resultsDiv.innerHTML = ''; // Clear previous results
 
-    // Check for matches (this part can be expanded for more detailed game logic)
+    const drawnNumbers = getUniqueRandomNumbers(6, 1, 39);
+
+    drawnNumbers.forEach(number => {
+        const numberBall = document.createElement('div');
+        numberBall.className = 'number-ball';
+        numberBall.textContent = number;
+        resultsDiv.appendChild(numberBall);
+    });
+
+    // You can expand this section with additional game logic if necessary.
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Any initialization code can go here
-});
+function getUniqueRandomNumbers(count, min, max) {
+    const numbers = new Set();
+    while(numbers.size < count) {
+        const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        numbers.add(randomNumber);
+    }
+    return [...numbers];
+}
+
