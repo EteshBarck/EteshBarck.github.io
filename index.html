@@ -1,113 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stock Market Simulator</title>
-  <style>
-    /* CSS */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
-    }
-    .container {
-      text-align: center;
-    }
-    h1 {
-      font-size: 2rem;
-    }
-    #lotto-container {
-      margin-top: 20px;
-    }
-    .number-box {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      border: 2px solid #ccc;
-      margin: 5px;
-      font-size: 1.2rem;
-      line-height: 40px;
-      cursor: pointer;
-    }
-    .selected {
-      background-color: green;
-      color: white;
-    }
-    #result {
-      margin-top: 20px;
-      font-size: 1.2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Match Simulator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Stock Market Simulator Coming Soon!</h1>
-    <!-- Oyun veya simülasyon içeriği buraya gelecek -->
-  </div>
-
-  <script>
-    // JavaScript
-    const selectedNumbers = new Set();
-
-    function toggleSelection(number) {
-      if (selectedNumbers.has(number)) {
-        selectedNumbers.delete(number);
-      } else {
-        selectedNumbers.add(number);
-      }
-      updateSelectionUI();
-    }
-
-    function updateSelectionUI() {
-      const numberBoxes = document.querySelectorAll('.number-box');
-      numberBoxes.forEach((box, index) => {
-        if (selectedNumbers.has(index + 1)) {
-          box.classList.add('selected');
-        } else {
-          box.classList.remove('selected');
-        }
-      });
-    }
-
-    // Simulate Lotto Draw
-    function simulateLottoDraw() {
-      const lottoNumbers = new Set();
-      while (lottoNumbers.size < 6) {
-        const randomNumber = Math.floor(Math.random() * 39) + 1;
-        lottoNumbers.add(randomNumber);
-      }
-      return lottoNumbers;
-    }
-
-    // Check Lotto Result
-    function checkResult() {
-      const lottoResult = simulateLottoDraw();
-      let correctCount = 0;
-      lottoResult.forEach(number => {
-        if (selectedNumbers.has(number)) {
-          correctCount++;
-        }
-      });
-
-      let message;
-      if (correctCount === 6) {
-        message = 'Congratulations! You won!';
-      } else if (correctCount >= 5) {
-        message = 'Wow! Almost there!';
-      } else if (correctCount >= 3) {
-        message = 'Close! Try again next time!';
-      } else {
-        message = 'Better luck next time!';
-      }
-
-      document.getElementById('result').innerText = message;
-    }
-  </script>
+    <div class="team-icons">
+        <img src="real_madrid_icon.png" alt="Real Madrid" class="team-icon" onclick="selectTeam('Real Madrid')">
+        <img src="barcelona_icon.png" alt="Barcelona" class="team-icon" onclick="selectTeam('Barcelona')">
+        <img src="liverpool_icon.png" alt="Liverpool" class="team-icon" onclick="selectTeam('Liverpool')">
+        <img src="man_city_icon.png" alt="Manchester City" class="team-icon" onclick="selectTeam('Manchester City')">
+        <img src="juventus_icon.png" alt="Juventus" class="team-icon" onclick="selectTeam('Juventus')">
+        <img src="inter_milan_icon.png" alt="Inter Milan" class="team-icon" onclick="selectTeam('Inter Milan')">
+        <img src="dortmund_icon.png" alt="Dortmund" class="team-icon" onclick="selectTeam('Dortmund')">
+        <img src="bayern_munich_icon.png" alt="Bayern Munich" class="team-icon" onclick="selectTeam('Bayern Munich')">
+        <img src="psg_icon.png" alt="Paris Saint-Germain" class="team-icon" onclick="selectTeam('Paris Saint-Germain')">
+        <img src="besiktas_icon.png" alt="Besiktas" class="team-icon" onclick="selectTeam('Besiktas')">
+    </div>
+    <div id="football-field">
+        <div class="ball"></div>
+    </div>
+    <div id="result"></div>
+    <script src="script.js"></script>
 </body>
 </html>
