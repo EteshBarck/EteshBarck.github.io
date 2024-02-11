@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.team-icons {
+    text-align: center;
+}
+
+.team-icon {
+    width: 50px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#football-field {
+    width: 100%;
+    height: 300px;
+    background-color: green;
+    position: relative;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.team-color-RealMadrid {
+    background-color: #FFFFFF;
+}
+
+.team-color-Barcelona {
+    background-color: #FF0000;
+}
+
+.team-color-Liverpool {
+    background-color: #FFD700;
+}
+
+.team-color-ManchesterCity {
+    background-color: #75AADB;
+}
+
+.team-color-Juventus {
+    background-color: #000000;
+}
+
+.team-color-InterMilan {
+    background-color: #00A1E0;
+}
+
+.team-color-Dortmund {
+    background-color: #FDE100;
+}
+
+.team-color-BayernMunich {
+    background-color: #DC052D;
+}
+
+.team-color-ParisSaintGermain {
+    background-color: #004D98;
+}
+
+.team-color-Besiktas {
+    background-color: #000000;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
