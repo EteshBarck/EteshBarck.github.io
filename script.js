@@ -24,10 +24,10 @@ function simulateMatch(team) {
             var randomOpponent = opponents[Math.floor(Math.random() * opponents.length)];
             if (randomOpponent === team) {
                 resultDiv.textContent = team + " wins! Congratulations!";
-                resultDiv.style.color = 'green';
+                resultDiv.style.color = '#4caf50';
             } else {
                 resultDiv.textContent = "Try again! " + randomOpponent + " wins this time!";
-                resultDiv.style.color = 'red';
+                resultDiv.style.color = '#f44336';
             }
             resultDiv.style.display = 'block';
             var confetti = document.createElement('div');
@@ -39,7 +39,7 @@ function simulateMatch(team) {
                 resetMatch();
             }, 5000);
         } else {
-            var randomX = Math.random() * 90; // 90% width
+            var randomX = Math.random() * 70; // 70% width
             var randomY = Math.random() * 80; // 80% height
             ball.style.left = randomX + '%';
             ball.style.top = randomY + '%';
@@ -58,5 +58,5 @@ function resetMatch() {
 
     var ball = document.querySelector('.ball');
     ball.style.left = '50%';
-    ball.style.top = '140px';
+    ball.style.top = '50%';
 }
