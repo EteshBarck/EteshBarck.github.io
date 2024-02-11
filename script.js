@@ -9,7 +9,7 @@ function populateHorseList() {
     { name: "Morning Glory", performance: [3, 4, 1, 2], kg: "49", age: "3" },
     { name: "Speed Demon", performance: [4, 3, 2, 1], kg: "53", age: "6" }
   ];
-  let tableHTML = '<table>';
+  let tableHTML = '<table><tr><th>#</th><th>Name</th><th>Age</th><th>Kg</th><th>Race</th></tr>';
   horses.forEach((horse, index) => {
     tableHTML += `
       <tr>
