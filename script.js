@@ -45,4 +45,11 @@ function celebrateWinner() {
     setTimeout(() => {
         document.getElementById('celebration-container').style.display = 'none';
         document.getElementById('race-table-container').style.display = 'block';
-    }, 300
+    }, 3000);
+}
+
+// This function will be used to initiate the race for a selected horse
+function race(horseIndex) {
+    console.log(`Racing with horse number ${horseIndex + 1}`);
+    // Simulate race logic here...
+}
