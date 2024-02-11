@@ -11,11 +11,11 @@
     <table id="race-table">
         <thead>
             <tr>
-                <th>Number</th>
+                <th>#</th>
                 <th>Name</th>
-                <th>Last 4 Races</th>
-                <th>Weight (kg)</th>
                 <th>Age</th>
+                <th>Kg</th>
+                <th>Race</th>
             </tr>
         </thead>
         <tbody>
@@ -24,13 +24,15 @@
     </table>
 </div>
 
-<div id="race-simulation" style="display:none;">
-    <div id="race-track"></div>
+<div id="race-simulation-container" style="display:none;">
+    <div id="race-track">
+        <!-- Horses will be dynamically added here -->
+    </div>
     <button id="start-race-btn">Start Race</button>
 </div>
 
-<div id="celebration" style="display:none;">
-    <!-- Celebration animation will be triggered here -->
+<div id="celebration-container" style="display:none;">
+    <p>Congratulations! You've won!</p>
 </div>
 
 <script src="script.js"></script>
