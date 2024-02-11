@@ -7,19 +7,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="team-icons">
-        <img src="real_madrid_icon.png" alt="Real Madrid" class="team-icon" onclick="selectTeam('Real Madrid')">
-        <img src="barcelona_icon.png" alt="Barcelona" class="team-icon" onclick="selectTeam('Barcelona')">
-        <img src="liverpool_icon.png" alt="Liverpool" class="team-icon" onclick="selectTeam('Liverpool')">
-        <img src="man_city_icon.png" alt="Manchester City" class="team-icon" onclick="selectTeam('Manchester City')">
-        <img src="juventus_icon.png" alt="Juventus" class="team-icon" onclick="selectTeam('Juventus')">
-        <img src="inter_milan_icon.png" alt="Inter Milan" class="team-icon" onclick="selectTeam('Inter Milan')">
-        <img src="dortmund_icon.png" alt="Dortmund" class="team-icon" onclick="selectTeam('Dortmund')">
-        <img src="bayern_munich_icon.png" alt="Bayern Munich" class="team-icon" onclick="selectTeam('Bayern Munich')">
-        <img src="psg_icon.png" alt="Paris Saint-Germain" class="team-icon" onclick="selectTeam('Paris Saint-Germain')">
-        <img src="besiktas_icon.png" alt="Besiktas" class="team-icon" onclick="selectTeam('Besiktas')">
+    <div class="team-selector">
+        <h2>Select Your Team</h2>
+        <div class="team-list">
+            <div class="team" onclick="selectTeam('Real Madrid')">Real Madrid</div>
+            <div class="team" onclick="selectTeam('Barcelona')">Barcelona</div>
+            <div class="team" onclick="selectTeam('Liverpool')">Liverpool</div>
+            <div class="team" onclick="selectTeam('Manchester City')">Manchester City</div>
+            <div class="team" onclick="selectTeam('Juventus')">Juventus</div>
+            <div class="team" onclick="selectTeam('Inter Milan')">Inter Milan</div>
+            <div class="team" onclick="selectTeam('Dortmund')">Dortmund</div>
+            <div class="team" onclick="selectTeam('Bayern Munich')">Bayern Munich</div>
+            <div class="team" onclick="selectTeam('Paris Saint-Germain')">Paris Saint-Germain</div>
+            <div class="team" onclick="selectTeam('Besiktas')">Besiktas</div>
+        </div>
     </div>
-    <div id="football-field">
+    <div class="football-field">
+        <div class="goalpost left"></div>
+        <div class="goalpost right"></div>
         <div class="ball"></div>
     </div>
     <div id="result"></div>
