@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horse Racing Game</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Horse Racing Simulation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="race-table-container">
-    <!-- Horse list will be dynamically populated here -->
+    <table id="race-table">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Last 4 Races</th>
+                <th>Weight (kg)</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Horse entries will be dynamically filled by JavaScript -->
+        </tbody>
+    </table>
 </div>
 
-<div id="race-simulation-container" style="display: none;">
-    <!-- Horse race simulation will be dynamically displayed here -->
+<div id="race-simulation" style="display:none;">
+    <div id="race-track"></div>
+    <button id="start-race-btn">Start Race</button>
 </div>
 
-<div id="confetti-wrapper" style="display: none;"></div>
+<div id="celebration" style="display:none;">
+    <!-- Celebration animation will be triggered here -->
+</div>
 
 <script src="script.js"></script>
 </body>
