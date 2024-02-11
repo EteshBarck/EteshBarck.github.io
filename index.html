@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football Match Simulator</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horse Racing Simulation</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="team-selector">
-        <h2>Select Your Team</h2>
-        <div class="team-list">
-            <div class="team" onclick="selectTeam('Real Madrid')">Real Madrid</div>
-            <div class="team" onclick="selectTeam('Barcelona')">Barcelona</div>
-            <div class="team" onclick="selectTeam('Liverpool')">Liverpool</div>
-            <div class="team" onclick="selectTeam('Manchester City')">Manchester City</div>
-            <div class="team" onclick="selectTeam('Juventus')">Juventus</div>
-            <div class="team" onclick="selectTeam('Inter Milan')">Inter Milan</div>
-            <div class="team" onclick="selectTeam('Dortmund')">Dortmund</div>
-            <div class="team" onclick="selectTeam('Bayern Munich')">Bayern Munich</div>
-            <div class="team" onclick="selectTeam('Paris Saint-Germain')">Paris Saint-Germain</div>
-            <div class="team" onclick="selectTeam('Besiktas')">Besiktas</div>
-        </div>
-    </div>
-    <div class="football-field">
-        <div class="goalpost left"></div>
-        <div class="goalpost right"></div>
-        <div class="ball"></div>
-    </div>
-    <div id="result"></div>
-    <script src="script.js"></script>
+
+<!-- At Yarışı Listesi -->
+<div id="race-list">
+  <table>
+    <thead>
+      <tr>
+        <th>Position</th>
+        <th>Horse Name</th>
+        <th>Last 4 Races</th>
+        <th>Kg</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- JavaScript ile dinamik olarak doldurulacak -->
+    </tbody>
+  </table>
+</div>
+
+<!-- At Yarışı Simülasyonu -->
+<div id="race-simulation">
+  <!-- JavaScript ile dinamik olarak doldurulacak -->
+</div>
+
+<!-- Kutlama Mesajı -->
+<div id="celebration-message" class="hidden">
+  Congratulations! 🎉
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
