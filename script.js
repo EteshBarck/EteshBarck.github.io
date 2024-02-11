@@ -1,11 +1,9 @@
 function selectTeam(team) {
-    var icons = document.querySelectorAll('.team-icon');
-    icons.forEach(function(icon) {
-        icon.style.display = 'none';
-    });
+    var teamSelector = document.querySelector('.team-selector');
+    teamSelector.style.display = 'none';
 
-    var footballField = document.getElementById('football-field');
-    footballField.classList.add('team-color-' + team.replace(/\s+/g, ''));
+    var footballField = document.querySelector('.football-field');
+    footballField.style.backgroundImage = 'url("football_field.jpg")';
 
     simulateMatch(team);
 }
@@ -30,16 +28,12 @@ function simulateMatch(team) {
                 resultDiv.style.color = '#f44336';
             }
             resultDiv.style.display = 'block';
-            var confetti = document.createElement('div');
-            confetti.classList.add('confetti');
-            document.body.appendChild(confetti);
             setTimeout(function() {
                 resultDiv.style.display = 'none';
-                confetti.remove();
                 resetMatch();
             }, 5000);
         } else {
-            var randomX = Math.random() * 70; // 70% width
+            var randomX = Math.random() * 90; // 90% width
             var randomY = Math.random() * 80; // 80% height
             ball.style.left = randomX + '%';
             ball.style.top = randomY + '%';
@@ -48,13 +42,11 @@ function simulateMatch(team) {
 }
 
 function resetMatch() {
-    var icons = document.querySelectorAll('.team-icon');
-    icons.forEach(function(icon) {
-        icon.style.display = 'inline-block';
-    });
+    var teamSelector = document.querySelector('.team-selector');
+    teamSelector.style.display = 'block';
 
-    var footballField = document.getElementById('football-field');
-    footballField.className = 'football-field';
+    var footballField = document.querySelector('.football-field');
+    footballField.style.backgroundImage = 'none';
 
     var ball = document.querySelector('.ball');
     ball.style.left = '50%';
