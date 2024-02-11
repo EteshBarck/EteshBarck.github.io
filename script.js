@@ -1,55 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
-  populateHorseList();
+    const horses = [
+        { name: "Thunder", lastFourRaces: "1,2,3,4", weight: 450, age: 5 },
+        { name: "Lightning", lastFourRaces: "2,1,4,3", weight: 460, age: 6 },
+        { name: "Storm", lastFourRaces: "4,3,2,1", weight: 455, age: 5 },
+        { name: "Blizzard", lastFourRaces: "3,4,1,2", weight: 445, age: 4 }
+    ];
+
+    fillRaceTable(horses);
 });
 
-function populateHorseList() {
-  const horses = [
-    { name: "Black Beauty", performance: [1, 2, 3, 4], kg: "50", age: "4" },
-    { name: "Red Rum", performance: [2, 1, 4, 3], kg: "52", age: "5" },
-    { name: "Morning Glory", performance: [3, 4, 1, 2], kg: "49", age: "3" },
-    { name: "Speed Demon", performance: [4, 3, 2, 1], kg: "53", age: "6" }
-  ];
-  let tableHTML = '<table><tr><th>#</th><th>Name</th><th>Age</th><th>Kg</th><th>Race</th></tr>';
-  horses.forEach((horse, index) => {
-    tableHTML += `
-      <tr>
-        <td>${index + 1}</td>
-        <td>${horse.name}</td>
-        <td>${horse.age}</td>
-        <td>${horse.kg}</td>
-        <td><button class="race-btn" onclick="simulateRace(${index})">Race</button></td>
-      </tr>
-    `;
-  });
-  tableHTML += '</table>';
-  document.getElementById('race-table-container').innerHTML = tableHTML;
+function fillRaceTable(horses) {
+    const tbody = document.querySelector('#race-table tbody');
+    horses.forEach((horse, index) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${horse.name}</td>
+            <td>${horse.lastFourRaces}</td>
+            <td>${horse.weight}</td>
+            <td>${horse.age}</td>
+        `;
+        tbody.appendChild(tr);
+    });
 }
 
-function simulateRace(horseIndex) {
-  const raceSimulationContainer = document.getElementById('race-simulation-container');
-  raceSimulationContainer.style.display = 'block';
-  raceSimulationContainer.innerHTML = 'Racing...';
-
-  setTimeout(() => {
-    const winnerIndex = Math.floor(Math.random() * 4); // Assuming 4 horses
-    raceSimulationContainer.innerHTML = `Horse ${winnerIndex + 1} wins!`;
-
-    if (winnerIndex === horseIndex) {
-      displayConfetti();
-    }
-
+// Example function for race simulation and celebration
+// Implement the actual simulation and celebration logic here
+function startRace() {
+    console.log("Race started!");
+    // Simulate a race
     setTimeout(() => {
-      raceSimulationContainer.style.display = 'none';
-      populateHorseList(); // Prepare for the next race
-    }, 3000); // Hide after 3 seconds
-  }, 10000); // Simulate 10-second race
+        console.log("Race finished!");
+        celebrateWinner();
+    }, 10000); // Simulate a 10-second race
 }
 
-function displayConfetti() {
-  const confettiElement = document.createElement('div');
-  confettiElement.classList.add('confetti');
-  document.body.appendChild(confettiElement);
-  setTimeout(() => {
-    confettiElement.remove(); // Clean up confetti element after it's done
-  }, 3000); // Display confetti for 3 seconds
+function celebrateWinner() {
+    console.log("Celebrating winner!");
+    // Trigger celebration animation
 }
