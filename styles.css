@@ -1,33 +1,65 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #e6e6e6;
+    margin: 0;
+    padding: 0;
 }
 
-.team-icons {
+.team-selector {
     text-align: center;
     margin-top: 20px;
 }
 
-.team-icon {
-    width: 60px;
-    margin: 10px;
-    cursor: pointer;
+.team-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-#football-field {
-    width: 80%;
-    height: 400px;
-    background-color: #1a472a;
-    position: relative;
+.team {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.team:hover {
+    background-color: #f0f0f0;
+}
+
+.football-field {
+    width: 100%;
+    max-width: 800px;
     margin: auto;
-    margin-top: 40px;
-    border-radius: 10px;
-    overflow: hidden;
+    position: relative;
+    height: 400px;
+    background-color: #5aaf2f;
+    margin-top: 20px;
+}
+
+.goalpost {
+    width: 10px;
+    height: 150px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
 }
 
 .ball {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: #ffffff;
     border-radius: 50%;
     position: absolute;
@@ -36,50 +68,9 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.team-color-RealMadrid {
-    background-color: #fcb514;
-}
-
-.team-color-Barcelona {
-    background-color: #a50044;
-}
-
-.team-color-Liverpool {
-    background-color: #c8102e;
-}
-
-.team-color-ManchesterCity {
-    background-color: #6cabdd;
-}
-
-.team-color-Juventus {
-    background-color: #000000;
-}
-
-.team-color-InterMilan {
-    background-color: #006bb3;
-}
-
-.team-color-Dortmund {
-    background-color: #fcef05;
-}
-
-.team-color-BayernMunich {
-    background-color: #db0007;
-}
-
-.team-color-ParisSaintGermain {
-    background-color: #0048ad;
-}
-
-.team-color-Besiktas {
-    background-color: #000000;
-}
-
 #result {
     text-align: center;
     margin-top: 20px;
     font-weight: bold;
     font-size: 24px;
-    color: #ffffff;
 }
