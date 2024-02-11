@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const horses = [
-        { name: "Thunder", lastFourRaces: "1,2,3,4", weight: 450, age: 5 },
-        { name: "Lightning", lastFourRaces: "2,1,4,3", weight: 460, age: 6 },
-        { name: "Storm", lastFourRaces: "4,3,2,1", weight: 455, age: 5 },
-        { name: "Blizzard", lastFourRaces: "3,4,1,2", weight: 445, age: 4 }
+        { name: "Black Beauty", age: 4, kg: 50 },
+        { name: "Red Rum", age: 5, kg: 52 },
+        { name: "Morning Glory", age: 3, kg: 49 },
+        { name: "Speed Demon", age: 6, kg: 53 }
     ];
 
     fillRaceTable(horses);
+    attachRaceHandlers();
 });
 
 function fillRaceTable(horses) {
@@ -16,26 +17,32 @@ function fillRaceTable(horses) {
         tr.innerHTML = `
             <td>${index + 1}</td>
             <td>${horse.name}</td>
-            <td>${horse.lastFourRaces}</td>
-            <td>${horse.weight}</td>
             <td>${horse.age}</td>
+            <td>${horse.kg}</td>
+            <td><button onclick="prepareRace(${index})">Race</button></td>
         `;
         tbody.appendChild(tr);
     });
 }
 
-// Example function for race simulation and celebration
-// Implement the actual simulation and celebration logic here
+function prepareRace(horseIndex) {
+    // Hide the table and show the race track
+    document.getElementById('race-table-container').style.display = 'none';
+    document.getElementById('race-simulation-container').style.display = 'block';
+    // Prepare horses on the track...
+}
+
 function startRace() {
-    console.log("Race started!");
-    // Simulate a race
-    setTimeout(() => {
-        console.log("Race finished!");
-        celebrateWinner();
-    }, 10000); // Simulate a 10-second race
+    // Start the race and determine a random winner...
+    // After the race is done, show celebration if the user's horse wins...
 }
 
 function celebrateWinner() {
-    console.log("Celebrating winner!");
-    // Trigger celebration animation
-}
+    // Show celebration message
+    document.getElementById('race-simulation-container').style.display = 'none';
+    document.getElementById('celebration-container').style.display = 'block';
+    // After 3 seconds, reset the race
+    setTimeout(() => {
+        document.getElementById('celebration-container').style.display = 'none';
+        document.getElementById('race-table-container').style.display = 'block';
+    }, 300
