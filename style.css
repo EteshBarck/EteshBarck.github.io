@@ -1,39 +1,74 @@
 body, html {
     margin: 0;
     padding: 0;
-    width: 100%;
     height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #FFDD00; /* Canlı sarı arkaplan rengi */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
-    background-color: #000;
 }
 
-.container {
-    position: relative;
+.wrapper {
     width: 100%;
-    height: 100%;
+    padding: 20px;
 }
 
-#bg-video {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    width: auto; 
-    height: auto;
-    z-index: -100;
-    background-size: cover;
-}
-
-h1 {
+.content h1 {
     font-size: 3em;
-    margin: 0.5em 0;
+    color: #000;
+    margin-bottom: 0.2em;
+    text-transform: uppercase;
+    animation: fadeInDown 1s ease both;
 }
 
-p {
-    font-size: 1.5em;
+.construction {
+    color: #d80000; /* Kırmızı renkli metin */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeInUp 1s 0.2s ease both;
+}
+
+.description {
+    color: #333;
+    margin: 20px 0;
+    line-height: 1.4;
+    animation: fadeIn 2s ease both;
+}
+
+.notify-me {
+    margin-top: 30px;
+    animation: fadeIn 2s 0.4s ease both;
+}
+
+#notifyButton {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#notifyButton:hover {
+    background-color: #555;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { transform: translate3d(0, -100%, 0); opacity: 0; }
+    to { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translate3d(0, 100%, 0); opacity: 0; }
+    to { transform: translate3d(0, 0, 0); opacity: 1; }
 }
