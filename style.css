@@ -38,26 +38,6 @@ body, html {
     animation: fadeIn 2s ease both;
 }
 
-.notify-me {
-    margin-top: 30px;
-    animation: fadeIn 2s 0.4s ease both;
-}
-
-#notifyButton {
-    border: none;
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#notifyButton:hover {
-    background-color: #555;
-}
-
-/* Animasyonlar */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
